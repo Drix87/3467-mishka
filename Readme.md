@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Кирилл Бондарь](https://up.htmlacademy.ru/adaptive/9/user/3467).
-* Наставник: `Неизвестно`.
+* Наставник: [Игорь Дерябин](https://htmlacademy.ru/profile/id212247).
 
 ---
 
