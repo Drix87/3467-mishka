@@ -12,11 +12,25 @@
       </a>
       <nav class="main-nav">
         <a href="" class="main-nav__hamburger"><span>|||</span></a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item main-nav__item--search">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="order">
-      <h1 class="order__title">Вязание на заказ</h1>
+      <h1 class="page-title">Вязание на заказ</h1>
       <div class="order__text">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </div>
@@ -26,12 +40,12 @@
         <fieldset>
           <legend>Тип</legend>
           <label class="order__type">
-            <input id="radio1" name="type" type="radio">
+            <input name="choose-type" type="radio" value="interier_acc" checked>
             <span class="control-type"></span>
             Аксессуар для интерьера
           </label>
           <label class="order__type">
-            <input id="radio2" name="type" type="radio">
+            <input name="choose-type" type="radio" value="kid_toy">
             <span class="control-type"></span>
             Детская игрушка
           </label>
@@ -40,32 +54,32 @@
         <fieldset>
           <legend>Цвет</legend>
           <label class="order__color">
-            <input type="checkbox">
+            <input type="checkbox" name="white" value="white">
             <span class="control-color"></span>
             Белый
           </label>
           <label class="order__color">
-            <input type="checkbox">
+            <input type="checkbox" name="gray" value="gray">
             <span class="control-color"></span>
             Серый
           </label>
           <label class="order__color">
-            <input type="checkbox">
+            <input type="checkbox" name="tiffani" value="tiffani">
             <span class="control-color"></span>
             «Тиффани»
           </label>
           <label class="order__color">
-            <input type="checkbox">
+            <input type="checkbox" name="black" value="black">
             <span class="control-color"></span>
             Черный
           </label>
           <label class="order__color">
-            <input type="checkbox">
+            <input type="checkbox" name="pink" value="pink">
             <span class="control-color"></span>
             Розовый
           </label>
           <label class="order__color">
-            <input type="checkbox">
+            <input type="checkbox" name="orange" value="orange">
             <span class="control-color"></span>
             Оранжевый
           </label>
@@ -75,19 +89,16 @@
           <legend>ФИО</legend>
 
           <label class="order__name">
-            <span class="control-name"></span>
             Имя:
-            <input type="text" placeholder="Введите ваше имя*">
+            <input type="text" placeholder="Введите ваше имя*" name="first_name" required>
           </label>
           <label class="order__name">
-            <span class="control-name"></span>
             Фамилия:
-            <input type="text" placeholder="Укажите фамилию*">
+            <input type="text" placeholder="Укажите фамилию*" name="last_name" required>
           </label>
           <label class="order__name">
-            <span class="control-name"></span>
             Отчество:
-            <input type="text" placeholder="Отчество, если желаете">
+            <input type="text" placeholder="Отчество, если желаете" name="patronymic">
           </label>
         </fieldset>
 
@@ -96,7 +107,7 @@
 
           <label class="order__tel">
             <span class="control-tel"></span>
-            <input type="text" placeholder="+7 XXX XX XX*">
+            <input type="tel" placeholder="+7 XXX XX XX*" name="telephone">
           </label>
 
         </fieldset>
@@ -106,7 +117,7 @@
 
           <label class="order__email">
             <span class="control-email"></span>
-            <input type="text" placeholder="Ваш Email*">
+            <input type="email" placeholder="Ваш Email*" name="email">
           </label>
 
         </fieldset>
@@ -115,7 +126,7 @@
           <legend>ДОП</legend>
 
           <label class="order__more">
-            <textarea placeholder="Опишите все ваши  пожелания к заказу"></textarea>
+            <textarea placeholder="Опишите все ваши  пожелания к заказу" name="more"></textarea>
           </label>
 
         </fieldset>
@@ -142,8 +153,37 @@
         <div class="copyright__text">
           Разработано:
         </div>
+        <div class="copyright__img">
+          <img src="http://placehold.it/27x34" width="27" height="34" alt="">
+        </div>
       </div>
     </footer>
+
+    <div class="modals">
+      <div class="modal-size">
+        <div class="modal-size__title">
+          Добавить в корзину
+        </div>
+        <form action="#" method="">
+          <legend>Выберите размер:</legend>
+          <label class="modal-size__type">
+            <input name="modal-size__type" type="radio" value="S" checked>
+            <span class="modal-size__control-type"></span>
+            S
+          </label>
+          <label class="modal-size__type">
+            <input name="modal-size__type" type="radio" value="M">
+            <span class="modal-size__control-type"></span>
+            M
+          </label>
+          <label class="modal-size__type">
+            <input name="modal-size__type" type="radio" value="L">
+            <span class="modal-size__control-type"></span>
+            L
+          </label>
+        </form>
+      </div>
+    </div>
 
   </body>
 </html>

@@ -12,52 +12,69 @@
       </a>
       <nav class="main-nav">
         <a href="" class="main-nav__hamburger"><span>|||</span></a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item main-nav__item--search">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="catalog">
-      <h1 class="catalog__title">Каталог товаров</h1>
+      <h1 class="page-title">Каталог товаров</h1>
       <ul class="catalog__list goods"> <!-- goods - Товары -->
         <li class="catalog__item good">
           <img class="good__img" src="http://placehold.it/260x195" width="260" height="195" alt="">
-          <h4 class="good__title">Зайчик-попрыгайчик</h4>
+          <div class="good__title">Зайчик-попрыгайчик</div>
           <div class="good__desc">Рост 30 см, вес 200 г</div>
           <div class="good__buy">
             <div class="good__price">1 200 руб.</div>
-            <span class="good__cart">Корзина</span>
+            <span class="good__cart">
+              <img src="http://placehold.it/21x19" width="21" height="19" alt="">
+            </span>
           </div>
         </li>
         <li class="catalog__item good">
           <img class="good__img" src="http://placehold.it/260x195" width="260" height="195" alt="">
-          <h4 class="good__title">Корзинка для белья</h4>
+          <div class="good__title">Корзинка для белья</div>
           <div class="good__desc">Диаметр 15 см, высота 10 см</div>
           <div class="good__buy">
             <div class="good__price">690 руб.</div>
-            <span class="good__cart">Корзина</span>
+            <span class="good__cart">
+              <img src="http://placehold.it/21x19" width="21" height="19" alt="">
+            </span>
           </div>
         </li>
         <li class="catalog__item good">
           <img class="good__img" src="http://placehold.it/260x195" width="260" height="195" alt="">
-          <h4 class="good__title">Большая корзинка для игрушек</h4>
+          <div class="good__title">Большая корзинка для игрушек</div>
           <div class="good__desc">Диаметр 30 см, высота 30 см</div>
           <div class="good__buy">
             <div class="good__price">1 500 руб.</div>
-            <span class="good__cart">Корзина</span>
+            <span class="good__cart">
+              <img src="http://placehold.it/21x19" width="21" height="19" alt="">
+            </span>
           </div>
         </li>
+        <li class="catalog__item catalog__item--special good">
+          <div class="good__title">Процесс производства</div>
+          <div class="good__img good__img--video">
+            <img src="http://placehold.it/260x150" width="260" height="150" alt="">
+          </div>
+          <div class="good__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</div>
+          <a href="#" class="btn special__order">Сделать заказ</a>
+        </li>
       </ul>
-      <div class="special">
-        <div class="special__title">
-          Процесс производства
-        </div>
-        <div class="special__img special__img--video">
-          <img src="http://placehold.it/260x150" width="260" height="150" alt="">
-        </div>
-        <p>
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-        </p>
-        <a href="#" class="btn special__order">Сделать заказ</a>
-      </div>
+
     </main>
 
     <footer class="page-footer">
@@ -76,8 +93,37 @@
         <div class="copyright__text">
           Разработано:
         </div>
+        <div class="copyright__img">
+          <img src="http://placehold.it/27x34" width="27" height="34" alt="">
+        </div>
       </div>
     </footer>
+
+    <div class="modals">
+      <div class="modal-size">
+        <div class="modal-size__title">
+          Добавить в корзину
+        </div>
+        <form action="#" method="">
+          <legend>Выберите размер:</legend>
+          <label class="modal-size__type">
+            <input name="modal-size__type" type="radio" value="S" checked>
+            <span class="modal-size__control-type"></span>
+            S
+          </label>
+          <label class="modal-size__type">
+            <input name="modal-size__type" type="radio" value="M">
+            <span class="modal-size__control-type"></span>
+            M
+          </label>
+          <label class="modal-size__type">
+            <input name="modal-size__type" type="radio" value="L">
+            <span class="modal-size__control-type"></span>
+            L
+          </label>
+        </form>
+      </div>
+    </div>
 
   </body>
 </html>
