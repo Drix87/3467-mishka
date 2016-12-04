@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
       <a class="logo" href="#">
-          Logo
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Logo">
       </a>
       <nav class="main-nav">
-        <a href="" class="main-nav__hamburger"><span>|||</span></a>
-        <ul class="main-nav__list">
+        <a href="" class="main-nav__hamburger">
+          <img src="img/icon-menu-open.svg" width="20" height="14" alt="menu-open">
+        </a>
+        <ul class="main-nav__list list">
           <li class="main-nav__item">
             <a href="#">Каталог товаров</a>
           </li>
@@ -33,14 +36,18 @@
 
       <div class="intro">
         <h1 class="page-title intro__title">Милые штуки ручной работы для дома</h1>
-        <ul class="intro__list">
-          <li class="intro__item">Предметы интерьера</li>
-          <li class="intro__item">Детские игрушки</li>
+        <ul class="intro__list list">
+          <li class="intro__item intro__item--inter">
+            <a href="#"><span>Предметы интерьера</span></a>
+            </li>
+          <li class="intro__item intro__item--toys">
+            <a href="#"><span>Детские игрушки</span></a>
+            </li>
         </ul>
       </div>
 
       <div class="top-week">
-        <h2 class="top-week__title">Вязаные корзинки</h2>
+        <h2 class="top-week__title heading">Вязаные корзинки</h2>
         <span class="top-week__sub-title">Товар недели</span>
         <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="top-week__table">
@@ -70,7 +77,7 @@
           </tr>
         </table>
         <div class="top-week__img">
-          <img src="http://placehold.it/260x315" width="260" height="315" alt="Товар недели">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недели">
         </div>
         <div class="top-week__price">
           Цена: 990 руб.
@@ -79,38 +86,38 @@
       </div>
 
       <div class="about">
-        <h2 class="about__title">Коротко о нас:</h2>
-        <ul class="about__list">
+        <h2 class="about__title heading">Коротко о нас:</h2>
+        <ul class="about__list list">
           <li class="about__item">
-            <img src="http://placehold.it/33x38" width="33" height="38" alt="Товар недели">
-            Экологически чистые материалы
+            <img src="img/icon-feature-1.svg" width="33" height="38" alt="">
+            <p>Экологически чистые материалы</p>
           </li>
           <li class="about__item">
-            <img src="http://placehold.it/47x27" width="47" height="27" alt="Товар недели">
-            Скандинавский стиль по российской цене
+            <img src="img/icon-feature-3.svg" width="47" height="27" alt="">
+            <p>Скандинавский стиль по российской цене</p>
           </li>
           <li class="about__item">
-            <img src="http://placehold.it/34x27" width="34" height="27" alt="Товар недели">
-            Увеличивает лайки на фотографиях
+            <img src="img/icon-feature-5.svg" width="34" height="27" alt="">
+            <p>Увеличивает лайки на фотографиях</p>
           </li>
           <li class="about__item">
-            <img src="http://placehold.it/35x24" width="35" height="24" alt="Товар недели">
-            Связано вручную с любовью и умилением
+            <img src="img/icon-feature-2.svg" width="35" height="24" alt="">
+            <p>Связано вручную с любовью и умилением</p>
           </li>
           <li class="about__item">
-            <img src="http://placehold.it/55x23" width="55" height="23" alt="Товар недели">
-            Поддержка отечественного производителя
+            <img src="img/icon-feature-4.svg" width="55" height="23" alt="">
+            <p>Поддержка отечественного производителя</p>
           </li>
           <li class="about__item">
-            <img src="http://placehold.it/33x32" width="33" height="32" alt="Товар недели">
-            Поставляется в подарочной упаковке
+            <img src="img/icon-feature-6.svg" width="33" height="32" alt="">
+            <p>Поставляется в подарочной упаковке</p>
           </li>
         </ul>
       </div>
 
       <div class="testimonials">
-        <h2 class="testimonials__title">Отзывы</h2>
-        <ul class="testimonials__list">
+        <h2 class="testimonials__title heading">Отзывы</h2>
+        <ul class="testimonials__list list">
           <li class="testimonials__item">
             <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <div class="testimonials__author-name">
@@ -121,13 +128,17 @@
             </span>
           </li>
         </ul>
-        <span class="testimonials__prev">Prev</span>
-        <span class="testimonials__next">Next</span>
+        <button class="testimonials__prev" type="button">
+          <img src="img/icon-left-arrow.svg" width="51" height="26" alt="">
+        </button>
+        <button class="testimonials__next" type="button">
+          <img src="img/icon-left-arrow.svg" width="51" height="26" alt="">
+        </button>
         <a href="#" class="btn testimonials__write">Написать</a>
       </div>
 
       <div class="contacts">
-        <h3 class="contacts__title">Контакты</h3>
+        <h3 class="contacts__title heading">Контакты</h3>
         <table class="contacts__table">
           <tr>
             <td>
@@ -149,7 +160,7 @@
           </tr>
         </table>
         <div class="contacts__map">
-          <img src="http://placehold.it/320x457" width="320" height="457" alt="Товар недели">
+          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="">
         </div>
         <a href="#" class="btn contacts__write">Напишите Нам</a>
       </div>
@@ -157,29 +168,29 @@
     </main>
 
     <footer class="page-footer">
-      <ul class="social-block">
-        <li class="social-item social-item--inst">
+      <ul class="social-block list">
+        <li class="social-block__item social-item social-item--inst">
           <a href="#">
-            <img src="http://placehold.it/22x21" width="22" height="21" alt="Товар недели">
+            <img src="img/icon-insta.svg" width="22" height="21" alt="">
           </a>
         </li>
-        <li class="social-item social-item--fb">
+        <li class="social-item social-block__item social-item--fb">
           <a href="#">
-            <img src="http://placehold.it/15x29" width="15" height="29" alt="Товар недели">
+            <img src="img/icon-fb.svg" width="15" height="29" alt="">
           </a>
         </li>
-        <li class="social-item social-item--tw">
+        <li class="social-item social-block__item social-item--tw">
           <a href="#">
-            <img src="http://placehold.it/24x20" width="24" height="20" alt="Товар недели">
+            <img src="img/icon-twitter.svg" width="24" height="20" alt="">
           </a>
         </li>
       </ul>
       <div class="copyright">
-        <div class="copyright__text">
+      <div class="copyright__text">
           Разработано:
         </div>
         <div class="copyright__img">
-          <img src="http://placehold.it/27x34" width="27" height="34" alt="">
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="">
         </div>
       </div>
     </footer>
@@ -191,21 +202,18 @@
         </div>
         <form action="#" method="">
           <legend>Выберите размер:</legend>
-          <label class="modal-size__type">
-            <input name="modal-size__type" type="radio" value="S" checked>
-            <span class="modal-size__control-type"></span>
-            S
-          </label>
-          <label class="modal-size__type">
-            <input name="modal-size__type" type="radio" value="M">
-            <span class="modal-size__control-type"></span>
-            M
-          </label>
-          <label class="modal-size__type">
-            <input name="modal-size__type" type="radio" value="L">
-            <span class="modal-size__control-type"></span>
-            L
-          </label>
+
+          <input id="radio1" name="modal-size__type" type="radio" value="S" checked>
+          <label for="radio1" class="modal-size__type">S</label>
+
+          <input id="radio2" name="modal-size__type" type="radio" value="M">
+          <label for="radio2" class="modal-size__type">M</label>
+
+          <input id="radio3" name="modal-size__type" type="radio" value="L">
+          <label for="radio3" class="modal-size__type">L</label>
+
+          <button class="btn" type="submit">Добавить</button>
+
         </form>
       </div>
     </div>
