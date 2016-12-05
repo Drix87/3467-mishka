@@ -1,0 +1,37 @@
+.top-week {
+  padding-top: 35px;
+
+  p {
+    margin: 25px 0;
+    font-size: 13px;
+  }
+}
+
+.top-week__title {
+  margin-bottom: 0;
+}
+
+.top-week__sub-title {
+  text-transform: uppercase;
+  color: $accdent-color;
+}
+
+.top-week__table {
+  border-collapse: collapse;
+  margin-bottom: 28px;
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+}
+
+.top-week__price {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}

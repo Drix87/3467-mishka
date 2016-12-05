@@ -1,0 +1,40 @@
+.intro {
+  background: #fafafa url('../img/hero-mobile@1x.jpg') center -20px no-repeat;
+}
+
+.intro__title {
+  margin: 0;
+  padding-top: 65px;
+  line-height: 30px;
+}
+
+.intro__list {
+  width: 100%;
+}
+
+.intro__item {
+  background: $accdent-color url('../img/icon-interior.svg') no-repeat;
+
+  &--inter {
+
+  }
+
+  &--toys {
+    background-color: darken($accdent-color, 10%);
+    background-image: url('../img/icon-toy.svg');
+  }
+
+  a {
+    display: block;
+    padding: 28px 0;
+    font-size: 19px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    width: 100px;
+  }
+}

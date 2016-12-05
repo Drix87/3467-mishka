@@ -1,0 +1,36 @@
+body {
+  font-size: $body-size;
+  line-height: $main-line-height;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: $text-color;
+}
+
+img {
+  max-width:100%;
+  height:auto;
+}
+
+.btn {
+  display: block;
+  font-size: 17px;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  color: $text-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid $text-color;
+}
+
+.heading {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

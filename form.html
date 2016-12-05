@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
       <a class="logo" href="#">
-          Logo
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Logo">
       </a>
       <nav class="main-nav">
-        <a href="" class="main-nav__hamburger"><span>|||</span></a>
-        <ul class="main-nav__list">
+        <a href="" class="main-nav__hamburger">
+          <img src="img/icon-menu-open.svg" width="20" height="14" alt="menu-open">
+        </a>
+        <ul class="main-nav__list list">
           <li class="main-nav__item">
             <a href="#">Каталог товаров</a>
           </li>
@@ -30,7 +33,7 @@
     </header>
 
     <main class="order">
-      <h1 class="page-title">Вязание на заказ</h1>
+      <h1 class="page-title heading">Вязание на заказ</h1>
       <div class="order__text">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </div>
@@ -131,30 +134,36 @@
 
         </fieldset>
 
-        <span>*Поля обязательны для заполнения</span>
+        <span class="order__need">*Поля обязательны для заполнения</span>
         <button class="btn order__submit" type="submit">Отправить заказ</button>
 
       </form>
     </main>
 
     <footer class="page-footer">
-      <ul class="social-block">
-        <li class="social-item social-item--inst">
-          <a href="#">Мы в инстаграмме</a>
+      <ul class="social-block list">
+        <li class="social-block__item social-item social-item--inst">
+          <a href="#">
+            <img src="img/icon-insta.svg" width="22" height="21" alt="">
+          </a>
         </li>
-        <li class="social-item social-item--fb">
-          <a href="#">Мы в фейсбук</a>
+        <li class="social-item social-block__item social-item--fb">
+          <a href="#">
+            <img src="img/icon-fb.svg" width="15" height="29" alt="">
+          </a>
         </li>
-        <li class="social-item social-item--tw">
-          <a href="#">Мы в твиттер</a>
+        <li class="social-item social-block__item social-item--tw">
+          <a href="#">
+            <img src="img/icon-twitter.svg" width="24" height="20" alt="">
+          </a>
         </li>
       </ul>
       <div class="copyright">
-        <div class="copyright__text">
+      <div class="copyright__text">
           Разработано:
         </div>
         <div class="copyright__img">
-          <img src="http://placehold.it/27x34" width="27" height="34" alt="">
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="">
         </div>
       </div>
     </footer>
@@ -166,21 +175,18 @@
         </div>
         <form action="#" method="">
           <legend>Выберите размер:</legend>
-          <label class="modal-size__type">
-            <input name="modal-size__type" type="radio" value="S" checked>
-            <span class="modal-size__control-type"></span>
-            S
-          </label>
-          <label class="modal-size__type">
-            <input name="modal-size__type" type="radio" value="M">
-            <span class="modal-size__control-type"></span>
-            M
-          </label>
-          <label class="modal-size__type">
-            <input name="modal-size__type" type="radio" value="L">
-            <span class="modal-size__control-type"></span>
-            L
-          </label>
+
+          <input id="radio1" name="modal-size__type" type="radio" value="S" checked>
+          <label for="radio1" class="modal-size__type">S</label>
+
+          <input id="radio2" name="modal-size__type" type="radio" value="M">
+          <label for="radio2" class="modal-size__type">M</label>
+
+          <input id="radio3" name="modal-size__type" type="radio" value="L">
+          <label for="radio3" class="modal-size__type">L</label>
+
+          <button class="btn" type="submit">Добавить</button>
+
         </form>
       </div>
     </div>

@@ -1,0 +1,48 @@
+.good {
+
+}
+
+.good__price {
+  font-weight: bold;
+}
+
+.good__info {
+  border: 1px solid $border-color;
+  padding: 0 25px
+}
+
+.good__title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.good__desc {
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.good__buy {
+  border-top: 1px solid $border-color;
+}
+
+.good__img {
+  margin-bottom: 20px;
+
+  &--video {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 102px;
+      height: 78px;
+      margin-top: -39px;
+      margin-left: -51px;
+      background: transparent url('../img/icon-play.svg') no-repeat;
+    }
+  }
+}
