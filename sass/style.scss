@@ -1,12 +1,11 @@
 // Common
 @import "variables";
 @import "mixins";
-
-// Global
-@import "global/fonts";
-@import "global/layout";
+@import "fonts";
 
 // Blocks
+@import "blocks/page";
+@import "blocks/page-title";
 @import "blocks/page-header";
 @import "blocks/main-nav";
 @import "blocks/intro";
@@ -16,8 +15,8 @@
 @import "blocks/contacts";
 @import "blocks/order";
 @import "blocks/catalog";
-@import "blocks/page-title";
 @import "blocks/good";
+@import "blocks/logo";
 @import "blocks/social-block";
 @import "blocks/copyright";
 @import "blocks/modal-size";

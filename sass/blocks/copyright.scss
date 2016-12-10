@@ -3,4 +3,23 @@
   border-top: 1px solid #e5e5e5;
   font-size: 19px;
   font-weight: bold;
+  text-align: center;
+
+  @include MQ(tabletPlus) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: none;
+  }
+}
+
+.copyright__text {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.copyright__img {
+  display: inline-block;
+  vertical-align: middle;
 }

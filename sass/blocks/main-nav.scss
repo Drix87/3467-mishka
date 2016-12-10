@@ -3,23 +3,152 @@
 }
 
 .main-nav__hamburger {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  line-height: 0;
 
+  &--opened + .main-nav__list {
+    display: inherit;
+  }
+
+  @include MQ(tabletPlus) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  text-align: left;
+  background: #fff;
+
+  @include MQ(mobile) {
+    @include outContainer;
+    width: 100vw;
+  }
+
+  @include MQ(tabletPlus) {
+    display: block;
+    position: static;
+    float: right;
+    font-size: 0;
+  }
+}
+
+.main-nav__list {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+
+  @include MQ(tabletPlus) {
+    display: inherit;
+    position: static;
+    background: transparent;
+  }
+}
+
+.main-nav__absolute {
+
+  @include MQ(tabletPlus) {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    .main-nav__item {
+      padding-left: 35px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @include MQ(desktop) {
+    top: 0;
+  }
 }
 
 .main-nav__item {
+  display: block;
+  padding: 33px 0;
+  padding-left: 75px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000;
   border-top: 1px solid #ececec;
+  position: relative;
+
+  @include MQ(tabletPlus) {
+    display: inline-block;
+    border: none;
+  }
 
   &:last-child {
     border-bottom: 1px solid #ececec;
+
+    @include MQ(tabletPlus) {
+      border-bottom: none;
+    }
   }
 
-  a {
+  &--search {
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      background: transparent url('../img/icon-search.svg') no-repeat;
+      width: 18px;
+      height: 19px;
+    }
+
+    @include MQ(tabletPlus) {
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
+      text-indent: -9999px;
+      width: 0;
+    }
+  }
+
+  &--cart {
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      background: transparent url('../img/icon-cart.svg') no-repeat;
+      width: 21px;
+      height: 19px;
+    }
+  }
+
+  &--info {
+    float: right;
+    font-weight: normal;
+
+    @include MQ(mobileNeg) {
+      display: none;
+    }
+
+    @include MQ(desktop) {
+      top: 90px;
+    }
+  }
+}
+
+.main-nav__desktop {
+  display: none;
+
+  @include MQ(desktop) {
     display: block;
-    padding: 33px 0;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 24px;
-    color: #000;
-    text-decoration: none;
   }
 }

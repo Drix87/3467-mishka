@@ -1,3 +1,17 @@
 .page-header {
+  text-align: center;
 
+  @include MQ(mobile) {
+    padding: 20px 0;
+  }
+
+  @include MQ(tablet) {
+    text-align: left;
+  }
+}
+
+.page-header__wrapper {
+  @include container;
+  @include clearfix;
+  position: relative;
 }

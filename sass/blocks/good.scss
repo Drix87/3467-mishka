@@ -1,14 +1,80 @@
 .good {
 
+  @include MQ(desktop) {
+    width: 316px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 70px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &--special {
+  border: 1px solid $border-color;
+  padding-bottom: 30px;
+
+    .good__title {
+      position: relative;
+      padding: 25px 0;
+      padding-left: 90px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        width: 32px;
+        height: 27px;
+        margin-top: -13px;
+        background: transparent url('../img/icon-video.svg') no-repeat;
+      }
+    }
+
+    .good__img {
+
+      @include MQ(tablet) {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      @include MQ(desktop) {
+        position: absolute;
+        left: 0;
+        width: auto;
+      }
+    }
+
+    @include MQ(tablet) {
+      position: relative;
+      padding-top: 150px;
+    }
+
+    @include MQ(desktop) {
+      width: auto;
+      display: block;
+      margin-right: inherit;
+      position: relative;
+      padding-left: 700px;
+      padding-right: 60px;
+    }
+  }
 }
 
-.good__price {
-  font-weight: bold;
+.good__name {
+  min-height: 70px;
 }
 
 .good__info {
   border: 1px solid $border-color;
-  padding: 0 25px
+  padding: 0 25px;
+  padding-top: 33px;
+
+  @include MQ(tablet) {
+    padding-left: 290px;
+  }
 }
 
 .good__title {
@@ -20,14 +86,30 @@
 .good__desc {
   font-size: 13px;
   margin-bottom: 28px;
+
+  @include MQ(tablet) {
+    margin: 0 30px 28px;
+  }
 }
 
 .good__buy {
   border-top: 1px solid $border-color;
+  @include clearfix;
+  line-height: 72px;
+}
+
+.good__price {
+  font-weight: bold;
+  float: left;
+}
+
+.good__cart {
+  font-weight: bold;
+  float: right;
 }
 
 .good__img {
-  margin-bottom: 20px;
+  display: block;
 
   &--video {
     display: inline-block;
@@ -45,4 +127,16 @@
       background: transparent url('../img/icon-play.svg') no-repeat;
     }
   }
+
+  @include MQ(tablet) {
+    float: left;
+  }
+
+  @include MQ(desktop) {
+    width: 100%;
+  }
+}
+
+.good__btn {
+  margin: 0 30px;
 }

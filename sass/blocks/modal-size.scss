@@ -1,4 +1,15 @@
+.modals {
+  padding-top: 35px;
+  padding-bottom: 45px;
+  border-top: 1px solid #ececec;
+  display: none;
+}
+
 .modal-size {
+
+  form {
+    text-align: center;
+  }
 
   input[type="radio"] {
     display: none;
@@ -8,16 +19,39 @@
     border-color: $accdent-color;
   }
 
-  button {
+  .page__btn {
     border: none;
     background: $accdent-color;
     color: #fff;
     margin-top: 45px;
     padding: 15px 0;
+    width: 100%;
+
+    @include MQ(tabletPlus) {
+      width: 258px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
   }
 
   legend {
     margin-bottom: 40px;
+    margin: 0 auto 30px;
+  }
+}
+
+.modal-size__wrapper {
+
+  @include MQ(tabletNeg) {
+    @include container;
+  }
+
+  @include MQ(tabletPlus) {
+    width: 566px;
+    margin: 0 auto;
+    border: 1px solid #c7c7c7;
+    padding: 25px 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -27,11 +61,22 @@
   font-weight: bold;
   margin-bottom: 15px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .modal-size__type {
-  padding: 12px 35px;
+  padding: 12px 34px;
   border: 2px solid #ececec;
   font-size: 17px;
   font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+
+  &:first-child {
+    float: left;
+  }
+
+  &:last-child {
+    float: right;
+  }
 }

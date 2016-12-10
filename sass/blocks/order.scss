@@ -5,6 +5,11 @@
     border-top: 1px solid #63d1bb;
     padding: 0;
     margin-bottom: 30px;
+
+    @include MQ(tabletPlus) {
+      border-top: inherit;
+      padding-left: 165px;
+    }
   }
 
   legend {
@@ -13,11 +18,26 @@
     text-transform: uppercase;
     color: $accdent-color;
     padding-right: 30px;
+
+    @include MQ(tabletPlus) {
+      position: absolute;
+      left: 0;
+      font-size: 17px;
+    }
   }
 
   form {
     padding-bottom: 55px;
+
+    @include MQ(tabletPlus) {
+      @include clearfix;
+      position: relative;
+    }
   }
+}
+
+.order__wrapper {
+  @include container;
 }
 
 .order__title {
@@ -26,6 +46,10 @@
 
 .order__text {
   margin-bottom: 30px;
+
+  @include MQ(desktop) {
+    margin-left: 165px;
+  }
 }
 
 .order__type,
@@ -34,13 +58,45 @@
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
+  display: block;
+}
+
+.order__color {
+
+  @include MQ(tabletPlus) {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 100px;
+  }
+
+  @include MQ(desktop) {
+    margin-right: 160px;
+  }
 }
 
 .order__submit {
   background: transparent;
+  width: 100%;
+
+  @include MQ(tabletPlus) {
+    float: left;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include MQ(desktop) {
+    margin-left: 165px;
+  }
 }
 
 .order__need {
   display: inline-block;
   margin-bottom: 35px;
+
+  @include MQ(tabletPlus) {
+    float: right;
+    line-height: 48px;
+    margin-bottom: 0;
+  }
 }

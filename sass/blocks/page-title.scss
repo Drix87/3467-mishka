@@ -1,6 +1,31 @@
 .page-title {
+  @include outContainer;
   font-size: 27px;
   line-height: 30px;
   background: #f1f1f1;
   padding: 75px 0;
+  text-align: center;
+
+  &.intro__title {
+    background: transparent;
+
+    @include MQ(tabletPlus) {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    @include MQ(tabletPlus) {
+      width: 620px;
+    }
+  }
+
+  @include MQ(tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include MQ(desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

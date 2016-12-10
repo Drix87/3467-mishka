@@ -1,0 +1,90 @@
+.page {
+  margin: 0;
+  font-size: $body-size;
+  line-height: $main-line-height;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: $text-color;
+
+  @include MQ(desktop) {
+    font-size: 17px;
+  }
+}
+
+.page__intro {
+  margin-bottom: 135px;
+
+  @include MQ(tabletPlus) {
+    margin-bottom: 0;
+  }
+}
+
+.page__top-week {
+  margin-bottom: 35px;
+}
+
+.page__about {
+  margin-bottom: 35px;
+}
+
+.page__testimonials {
+  margin-bottom: 35px;
+
+  @include MQ(tabletPlus) {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.page__img {
+  display: block;
+  max-width:100%;
+  height:auto;
+}
+
+.page__btn {
+  display: block;
+  font-size: 17px;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  color: $text-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid $text-color;
+}
+
+.page__link {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.page__heading {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 30px;
+
+  @include MQ(tablet) {
+    font-size: 43px;
+  }
+
+  @include MQ(desktop) {
+    font-size: 53px;
+  }
+}
+
+.page__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.page__buttons {
+  @include clearfix;
+
+  @include MQ(tabletPlus) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

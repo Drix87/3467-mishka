@@ -2,31 +2,14 @@
 
 }
 
+.catalog__wrapper {
+  @include container;
+}
+
 .catalog__list {
   margin-bottom: 60px;
 }
 
 .catalog__item {
   margin-bottom: 30px;
-  padding-bottom: 30px;
-
-  &--special {
-    border: 1px solid $border-color;
-
-    .good__title {
-      position: relative;
-      padding: 25px 0;
-      padding-left: 55px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 32px;
-        height: 27px;
-        background: transparent url('../img/icon-video.svg') no-repeat;
-      }
-    }
-  }
 }

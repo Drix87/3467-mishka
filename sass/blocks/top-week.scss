@@ -4,16 +4,80 @@
   p {
     margin: 25px 0;
     font-size: 13px;
+
+    @include MQ(tabletPlus) {
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+
+  @include MQ(desktop) {
+    padding-top: 70px;
+  }
+
+  header {
+
+    @include clearfix;
+
+    @include MQ(tabletPlus) {
+      margin-bottom: 65px;
+    }
+  }
+}
+
+.top-week__wrapper {
+  @include container;
+  @include clearfix;
+
+  @include MQ(tabletPlus) {
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+
+  @include MQ(desktop) {
+    padding-left: 175px;
   }
 }
 
 .top-week__title {
   margin-bottom: 0;
+  float: left;
+
+  @include MQ(desktop) {
+    left: 110px;
+    top: 70px;
+  }
 }
 
 .top-week__sub-title {
   text-transform: uppercase;
   color: $accdent-color;
+  font-weight: bold;
+  line-height: 16px;
+
+  @include MQ(tabletPlus) {
+    @include clearfix;
+    float: right;
+    width: 100px;
+    text-align: center;
+  }
+
+  @include MQ(desktop) {
+    position: absolute;
+    left: 36px;
+  }
+}
+
+.top-week__main {
+
+  @include MQ(tablet) {
+    padding-right: 305px;
+  }
+
+  @include MQ(desktop) {
+    padding-right: 580px;
+  }
 }
 
 .top-week__table {
@@ -30,8 +94,29 @@
   }
 }
 
+.top-week__img {
+  text-align: center;
+  line-height: 0;
+  margin-bottom: 30px;
+
+  @include MQ(tabletPlus) {
+    position: absolute;
+    top: 125px;
+    right: 0;
+  }
+}
+
 .top-week__price {
   font-size: 17px;
   font-weight: bold;
   margin-bottom: 25px;
+  text-align: center;
+}
+
+.top-week__order {
+
+  @include MQ(tabletPlus) {
+    display: inline-block;
+    width: 100%;
+  }
 }
