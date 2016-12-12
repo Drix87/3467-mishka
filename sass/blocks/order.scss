@@ -4,11 +4,19 @@
     border: none;
     border-top: 1px solid #63d1bb;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     @include MQ(tabletPlus) {
       border-top: inherit;
       padding-left: 165px;
+      padding-top: 50px;
+      padding-bottom: 30px;
+
+      &:nth-child(2n) {
+        @include outContainer;
+        background: #f1f1f1;
+        padding-left: 215px;
+      }
     }
   }
 
@@ -18,11 +26,16 @@
     text-transform: uppercase;
     color: $accdent-color;
     padding-right: 30px;
+    margin-bottom: 25px;
 
     @include MQ(tabletPlus) {
       position: absolute;
       left: 0;
       font-size: 17px;
+    }
+
+    @include MQ(desktop) {
+      left: 60px;
     }
   }
 
@@ -47,6 +60,12 @@
 .order__text {
   margin-bottom: 30px;
 
+  @include MQ(tablet) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  }
+
   @include MQ(desktop) {
     margin-left: 165px;
   }
@@ -59,18 +78,247 @@
   line-height: 18px;
   font-weight: bold;
   display: block;
+
+  @include MQ(tablet) {
+    font-size: 19px;
+  }
 }
 
+.order__type {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 55px;
+  min-height: 44px;
+  line-height: 44px;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + .control-type {
+    box-sizing: border-box;
+    border: 2px solid #444444;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+
+    @include MQ(tabletPlus) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  input[type="radio"]:checked + .control-type {
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: $accdent-color;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+
+      @include MQ(tabletPlus) {
+        width: 22px;
+        height: 22px;
+        margin-left: -11px;
+        margin-top: -11px;
+      }
+    }
+  }
+
+  @include MQ(tabletPlus) {
+    padding-left: 80px;
+    margin-bottom: 25px;
+    min-height: 52px;
+    line-height: 52px;
+  }
+}
+
+.order__text-radio {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25;
+}
+
+
 .order__color {
+  position: relative;
+  padding-left: 60px;
+  min-height: 44px;
+  line-height: 44px;
+  margin-bottom: 17px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + .control-color {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #444444;
+
+    @include MQ(tabletPlus) {
+      width: 54px;
+      height: 52px;
+    }
+  }
+
+  input[type="checkbox"]:checked + .control-color {
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 33px;
+      height: 23px;
+      margin-left: -16px;
+      margin-top: -12px;
+      background: transparent url('../img/icon-tick.svg') no-repeat;
+    }
+  }
 
   @include MQ(tabletPlus) {
     display: inline-block;
     vertical-align: top;
-    margin-right: 100px;
+    width: 180px;
+    padding-left: 80px;
+    min-height: 52px;
+    line-height: 52px;
+    margin-bottom: 23px;
   }
 
   @include MQ(desktop) {
-    margin-right: 160px;
+    margin-right: 65px;
+
+    &:nth-child(3n+1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.order__name,
+.order__tel,
+.order__email {
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    padding: 15px 0px;
+    margin-bottom: 21px;
+    font-size: 17px;
+
+    @include MQ(tabletPlus) {
+      font-size: 19px;
+    }
+  }
+}
+
+.order__tel,
+.order__email {
+
+  input[type="tel"],
+  input[type="email"] {
+
+    @include MQ(tabletPlus) {
+        background: #f1f1f1;
+    }
+  }
+}
+
+.order__tel-leg,
+.order__email-leg {
+
+  @include MQ(tabletPlus) {
+    padding: 15px 0;
+  }
+}
+
+.order__tel {
+  display: block;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 25px;
+    height: 24px;
+    margin-top: -12px;
+    background: transparent url('../img/icon-phone.svg') no-repeat;
+  }
+
+  @include MQ(tabletPlus) {
+    @include container;
+  }
+
+  @include MQ(tablet) {
+    margin-left: 0;
+  }
+}
+
+.order__email {
+  display: block;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 32px;
+    height: 26px;
+    margin-top: -13px;
+    background: transparent url('../img/icon-mail.svg') no-repeat;
+  }
+
+  @include MQ(tabletPlus) {
+      display: block;
+      @include container;
+  }
+
+  @include MQ(tablet) {
+    margin-left: 0;
+  }
+}
+
+.order__more {
+
+  textarea {
+    width: 100%;
+    border: none;
+    border: 2px solid #444444;
+    font-size: 17px;
+    min-height: 142px;
+    box-sizing: border-box;
+    padding: 15px;
+
+    @include MQ(tabletPlus) {
+      font-size: 19px;
+    }
   }
 }
 
@@ -79,10 +327,11 @@
   width: 100%;
 
   @include MQ(tabletPlus) {
-    float: left;
+    margin-left: 165px;
     width: auto;
     padding-left: 30px;
     padding-right: 30px;
+
   }
 
   @include MQ(desktop) {
@@ -93,6 +342,7 @@
 .order__need {
   display: inline-block;
   margin-bottom: 35px;
+  font-size: 14px;
 
   @include MQ(tabletPlus) {
     float: right;
