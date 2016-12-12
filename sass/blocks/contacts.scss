@@ -109,12 +109,7 @@
 
     @include MQ(desktop) {
       width: 525px;
-      height: 433px;
-
-      left: inherit;
-      margin-left: inherit;
-      right: 0;
-      top: 0;
+      height: 456px;
     }
   }
 
@@ -131,7 +126,7 @@
     height: 100px;
   }
 
-  @include MQ(desktopNeg) {
+  @include MQ(tabletNeg) {
     @include outContainer;
   }
 
@@ -140,6 +135,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    margin-bottom: 0;
   }
 }
 
