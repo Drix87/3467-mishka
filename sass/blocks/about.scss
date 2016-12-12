@@ -21,9 +21,21 @@
 
   &:last-child {
     margin-right: 0;
+
+    @include MQ(tablet) {
+      float: right;
+    }
   }
 
   @include MQ(tabletPlus) {
+    margin-right: 0px;
+  }
+
+  @include MQ(tablet) {
+    float: left;
+  }
+
+  @include MQ(desktop) {
     margin-right: 0px;
   }
 }
