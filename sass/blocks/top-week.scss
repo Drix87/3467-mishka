@@ -45,8 +45,8 @@
   float: left;
 
   @include MQ(desktop) {
-    left: 110px;
-    top: 70px;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -72,7 +72,7 @@
 .top-week__main {
 
   @include MQ(tablet) {
-    padding-right: 305px;
+    padding-right: 350px;
   }
 
   @include MQ(desktop) {
@@ -92,6 +92,10 @@
   td {
     padding: 10px 0;
   }
+
+  @include MQ(desktop) {
+    margin-bottom: 105px;
+  }
 }
 
 .top-week__img {
@@ -104,6 +108,23 @@
     top: 125px;
     right: 0;
   }
+
+  @include MQ(desktop) {
+    top: 0;
+  }
+
+  img {
+
+    @include MQ(tablet) {
+      height: 380px;
+      width: auto;
+    }
+
+    @include MQ(desktop) {
+      height: 590px;
+      width: auto;
+    }
+  }
 }
 
 .top-week__price {
@@ -111,6 +132,10 @@
   font-weight: bold;
   margin-bottom: 25px;
   text-align: center;
+
+  @include MQ(desktop) {
+    margin-bottom: 35px;
+  }
 }
 
 .top-week__order {

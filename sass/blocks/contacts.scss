@@ -12,7 +12,7 @@
   @include MQ(desktop) {
     position: relative;
     box-sizing: border-box;
-    padding-right: 460px;
+    padding-right: 570px;
     padding-left: 175px;
     padding-top: 88px;
   }
@@ -53,9 +53,22 @@
   tr {
     vertical-align: top;
 
+    &:first-child {
+
+      @include MQ(tabletPlus) {
+        width: 55%;
+      }
+    }
+
+    &:last-child {
+
+      @include MQ(tabletPlus) {
+        width: 45%;
+      }
+    }
+
     @include MQ(tabletPlus) {
       display: inline-block;
-      width: 50%;
     }
 
     @include MQ(desktop) {
@@ -83,12 +96,11 @@
   }
 
   @include MQ(desktop) {
-    margin-bottom: 65px;
+    margin-bottom: 73px;
   }
 }
 
 .contacts__map {
-  @include outContainer;
   position: relative;
   margin-bottom: 40px;
 
@@ -96,6 +108,9 @@
     width: 100%;
 
     @include MQ(desktop) {
+      width: 525px;
+      height: 457px;
+
       left: inherit;
       margin-left: inherit;
       right: 0;
@@ -114,6 +129,10 @@
     background: transparent url('../img/icon-map-pin.svg') no-repeat;
     width: 67px;
     height: 100px;
+  }
+
+  @include MQ(desktopNeg) {
+    @include outContainer;
   }
 
   @include MQ(desktop) {

@@ -17,6 +17,15 @@
 .about__list {
   display: inline-block;
   vertical-align: top;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include MQ(tabletPlus) {
+    margin-right: 0px;
+  }
 }
 
 .about__item {
@@ -24,15 +33,5 @@
 
   img {
     height: 38px;
-  }
-
-  @include MQ(tabletPlus) {
-    // display: inline-block;
-    // vertical-align: top;
-    // width: 300px;
-  }
-
-  @include MQ(desktop) {
-    // width: 430px;
   }
 }
