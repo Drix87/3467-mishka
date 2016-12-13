@@ -1,3 +1,21 @@
 .page-footer {
   background: #f1f1f1;
+
+  .logo {
+    display: none;
+
+    @include MQ(tabletPlus) {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -20px;
+    }
+  }
+}
+
+.page-footer__wrapper {
+  @include container;
+  @include clearfix;
+  position: relative;
 }

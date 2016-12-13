@@ -1,14 +1,93 @@
 .good {
 
+  @include MQ(desktop) {
+    width: 316px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 46px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &--special {
+  border: 1px solid $border-color;
+  padding-bottom: 30px;
+
+    .good__title {
+      position: relative;
+      padding: 25px 0;
+      padding-left: 90px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        width: 32px;
+        height: 27px;
+        margin-top: -13px;
+        background: transparent url('../img/icon-video.svg') no-repeat;
+      }
+
+      @include MQ(desktop) {
+        padding-left: 0;
+        padding-top: 90px;
+        width: 150px;
+
+        &::before {
+          top: 53px;
+          left: 0;
+        }
+      }
+    }
+
+    .good__img {
+
+      @include MQ(tablet) {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      @include MQ(desktop) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+      }
+    }
+
+    @include MQ(tablet) {
+      position: relative;
+      padding-top: 465px;
+    }
+
+    @include MQ(desktop) {
+      width: auto;
+      display: block;
+      margin-right: inherit;
+      position: relative;
+      padding-left: 785px;
+      padding-right: 60px;
+      padding-bottom: 86px;
+    }
+  }
 }
 
-.good__price {
-  font-weight: bold;
+.good__name {
+  min-height: 70px;
 }
 
 .good__info {
   border: 1px solid $border-color;
-  padding: 0 25px
+  padding: 0 25px;
+  padding-top: 23px;
+
+  @include MQ(tablet) {
+    padding-left: 355px;
+  }
 }
 
 .good__title {
@@ -20,14 +99,38 @@
 .good__desc {
   font-size: 13px;
   margin-bottom: 28px;
+
+  @include MQ(tablet) {
+    margin: 0 30px 28px;
+  }
+
+  @include MQ(mobile) {
+    @include container;
+  }
 }
 
 .good__buy {
   border-top: 1px solid $border-color;
+  @include clearfix;
+  line-height: 72px;
+
+  @include MQ(tablet) {
+    margin-top: 165px;
+  }
+}
+
+.good__price {
+  font-weight: bold;
+  float: left;
+}
+
+.good__cart {
+  font-weight: bold;
+  float: right;
 }
 
 .good__img {
-  margin-bottom: 20px;
+  display: block;
 
   &--video {
     display: inline-block;
@@ -44,5 +147,37 @@
       margin-left: -51px;
       background: transparent url('../img/icon-play.svg') no-repeat;
     }
+
+    img {
+
+      @include MQ(tablet) {
+        height: 465px;
+        width: 100%;
+      }
+
+      @include MQ(desktop) {
+        height: 455px;
+        width: 706px;
+      }
+    }
+  }
+
+  @include MQ(tablet) {
+    width: 334px;
+    height: 334px;
+    float: left;
+  }
+
+  @include MQ(desktop) {
+    width: 100%;
+    height: 462px;
+  }
+}
+
+.good__btn {
+  margin: 0 30px;
+
+  @include MQ(desktop) {
+    margin: inherit;
   }
 }

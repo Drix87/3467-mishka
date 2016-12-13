@@ -2,8 +2,47 @@
   padding-bottom: 40px;
 }
 
+.contacts__wrapper {
+  @include container;
+
+  @include MQ(tablet) {
+    text-align: center;
+  }
+
+  @include MQ(desktop) {
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 570px;
+    padding-left: 175px;
+    padding-top: 88px;
+  }
+}
+
 .contacts__title {
-  font-size: 18px;
+
+  @include MQ(tabletPlus) {
+    position: relative;
+    text-align: left;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -25px;
+      right: 0;
+      background: url('../img/icon-flag.svg') no-repeat;
+      width: 47px;
+      height: 81px;
+    }
+  }
+
+  @include MQ(desktop) {
+    margin-bottom: 50px;
+
+    &::after {
+      right: inherit;
+      left: -110px;
+    }
+  }
 }
 
 .contacts__table {
@@ -11,8 +50,39 @@
   margin-bottom: 30px;
   width: 100%;
 
+  tr {
+    vertical-align: top;
+
+    &:first-child {
+
+      @include MQ(tabletPlus) {
+        width: 55%;
+      }
+    }
+
+    &:last-child {
+
+      @include MQ(tabletPlus) {
+        width: 45%;
+      }
+    }
+
+    @include MQ(tabletPlus) {
+      display: inline-block;
+    }
+
+    @include MQ(desktop) {
+      display: inherit;
+      width: auto;
+    }
+  }
+
   td {
-    padding: 10px 0;
+    padding: 17px 0;
+
+    &:first-child {
+      width: 80px;
+    }
   }
 
   a {
@@ -20,8 +90,59 @@
     color: $text-color;
     border-bottom: 1px solid $accdent-color;
   }
+
+  @include MQ(tablet) {
+    text-align: left;
+  }
+
+  @include MQ(desktop) {
+    margin-bottom: 73px;
+  }
 }
 
 .contacts__map {
   position: relative;
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+
+    @include MQ(desktop) {
+      width: 525px;
+      height: 456px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background: transparent url('../img/icon-map-pin.svg') no-repeat;
+    width: 67px;
+    height: 100px;
+  }
+
+  @include MQ(tabletNeg) {
+    @include outContainer;
+  }
+
+  @include MQ(desktop) {
+    @include clearfix;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__write {
+
+  @include MQ(tabletPlus) {
+    display: inline-block;
+    padding: 12px 40px;
+  }
 }

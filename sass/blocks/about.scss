@@ -1,7 +1,49 @@
 .about {
+  @include clearfix;
+}
 
+.about__wrapper {
+  @include container;
+
+  @include MQ(desktop) {
+    padding-left: 175px;
+  }
 }
 
 .about__title {
   margin-bottom: 30px;
+}
+
+.about__list {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+
+    @include MQ(tablet) {
+      float: right;
+    }
+  }
+
+  @include MQ(tabletPlus) {
+    margin-right: 0px;
+  }
+
+  @include MQ(tablet) {
+    float: left;
+  }
+
+  @include MQ(desktop) {
+    margin-right: 0px;
+  }
+}
+
+.about__item {
+  width: 75%;
+
+  img {
+    height: 38px;
+  }
 }
